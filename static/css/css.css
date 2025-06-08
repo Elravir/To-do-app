@@ -1,0 +1,220 @@
+
+table th {
+    /*font-weight: bold;*/
+    padding: 10px;
+    background: #4d6c8f;
+    border: 1px solid #dddddd;
+    /* text-align: center;*/
+    font-size: 25px;
+    color: azure;
+    font-family:Arial;
+    font-size: medium;
+}
+
+table td {
+    font-family: Arial;
+    border: 1px solid #dddddd;
+    /* padding: 0;*/
+    margin: 0;
+    width: 160px;
+    padding: 2px;
+    position: relative;
+    align-items: start;
+    justify-content: start;
+    /*display:flex;*/
+    /*flex-direction:row;*/
+}
+
+
+
+.time_text {
+    font-family: Arial;
+    /* font-size: 25px; */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+.h2 {
+    margin-left: 5px;
+}
+.C_T {
+    padding: 10px 0px 0 0;
+    margin: 0 0px 0 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: calc(100% - 120px);
+    align-items: stretch;
+}
+.filter {
+    font-family: Arial;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 0px;
+    min-height: 520px;
+    max-height: 590px;
+    overflow: hidden;
+    width: 200px;
+    border: solid darkgray;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content:space-between;
+    /*justify-content:center;*/
+    align-items: center;
+    border-radius: 7px;
+}
+.filter_checkbox {
+    padding: 10px 0 0 0;
+}
+.time_text-filter {
+    height: 30px;
+    padding: 10px 0 0px 0;
+    border-bottom: solid 2px darkgray;
+    width: 80%;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: large;
+    align-items: center;
+}
+.filter_button {
+    width: 100%;
+    font-size: medium;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius:7px;
+}
+    .filter_button:hover {
+        background-color: #ccc;
+    }
+.filter_button-green {
+    width: 100%;
+    font-size: medium;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+    border-radius: 7px;
+}
+    .filter_button-green:hover {
+        color: #fff;
+        background-color: green;
+    }
+.calendar_table {
+    height: 100%;
+    table-layout: fixed;
+    margin: 0 5px 0 0;
+    max-width: calc(100% - 200px);
+}
+.calendar_table_first-row{
+    
+}
+.arrow_button {
+    position: relative;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+}
+.arrow_button_span{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 1rem;
+}
+.arrow_button_span-all {
+    padding: 50% 50%;
+    
+}
+.arrow {
+    padding: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translateY(-50%) translateX(-50%);
+    /*-webkit-transform: translateY(-50%);*/
+}
+.arrow_inverse {
+    padding: 10px;
+    border: solid black;
+    border-width: 3px 0 0 3px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+}
+.button_book {
+    text-align: start;
+    border: 1.7px dashed #5c5c5c;
+    border-radius: 7px;
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #5c5c5c;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+
+}
+    .button_book:hover {
+        background-color: grey;
+        color:azure;
+    }
+.calendar_table_first-vert{
+    width:200px;
+}
+.calendar_table_first-vert1 {
+    background-color: green;
+    color: azure;
+}
+.calendar_table_first-vert2 {
+
+    background-color: lemonchiffon;
+    color: black;
+}
+.calendar_table_first-vert3 {
+    background-color: #bce0eb;
+    color: black;
+}
+.calendar_table_first-vert4 {
+    background-color: dodgerblue;
+    color: azure;
+}
+.calendar_table_first-vert5 {
+    background-color: lightcoral;
+    color: black;
+}
+.calendar_table_first-vert6 {
+    background-color: palegreen;
+    color: black;
+}
+
+.calendar_table_first-vert7 {
+    background-color: #ac93cc;
+    color: black;
+}
+.calendar_table-task1 {
+    margin-top: 2px;
+    width: 100%;
+    color: gray;
+    background-color: lemonchiffon;
+    border: 1.7px solid darkgray;
+    border-radius: 7px;
+}
+.calendar_table-task2 {
+    margin-top: 2px;
+    width: 100%;
+    color: gray;
+    background-color: #bce0eb;
+    border: 1.7px solid darkgray;
+    border-radius: 7px;
+}
+

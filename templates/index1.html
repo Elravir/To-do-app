@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+  
+  <script defer src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/moment-with-locales.min.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/ru.js') }}"></script>
+  
+  <script defer src="{{ url_for('static', filename='js/index.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/server.js') }}"></script>
+  
+  <title>Calendar_table</title>
+</head>
+<body>
+    <div class="arrow_button">
+        <span></span>
+        <span></span>
+        <span class="arrow_button_span">
+            <a href="#" onclick="getWeekBefore()" class="arrow_button_span-left arrow_button_span-all">
+                <button class="arrow_inverse"></button>
+            </a>
+            <span><h4 id="time_text" class="time_text "></h4></span>
+            <a href="#" onclick="getWeekAfter()" class="arrow_button_span-right arrow_button_span-all">
+                <button class="arrow"></button>
+            </a>
+
+        </span>
+
+    </div>
+    <div class="C_T">
+        <div class="filter">
+            <label class="time_text-filter">
+                Фильтр
+            </label>
+            <!-- <div class="">
+
+
+            </div> -->
+            <div class="filter_checkbox">
+                <label class="filter_checkbox">
+                    <input type="checkbox" id="Переговорная комната Бухгалтерия" value="one" title="Переговорная комната Бухгалтерия">
+                    Переговорная комната Бухгалтери
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Дом Ученых - Большой зал" value="two" title="Переговорная комната Бухгалтерия">
+                    Дом Ученых - Большой зал
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Дом Ученых - Переговорная (Шах комната)" value="three" title="Переговорная комната Бухгалтерия">
+                    Дом Ученых - Переговорная (Шах комната)
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Малый зал для совещаний Дирекция(новая)" value="for" title="Переговорная комната Бухгалтерия">
+                    Малый зал для совещаний Дирекция(новая)
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Дом Международных Совещаний - Главный зал" value="five" title="Переговорная комната Бухгалтерия">
+                    Дом Международных Совещаний - Главный зал
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Дом Международных Совещаний - Зеленый зал" value="six" title="Переговорная комната Бухгалтерия">
+                    Дом Международных Совещаний - Зеленый зал
+                </label></br>
+            </div>
+            <div class="filter_checkbox">
+                <label>
+                    <input type="checkbox" id="Административное здание номер 6 - Переговорная комната" value="seven" title="Переговорная комната Бухгалтерия">
+                    Административное здание номер 6 - Переговорная комната
+                </label>
+            </div>
+            <button class=" filter_button-green" onclick="ApplyFilter()">
+                Фильтр
+            </button>
+            <button class="filter_button" onclick="ResetFilter()">
+                Сбросить фильтр
+            </button>
+                </div>
+                <table class="calendar_table">
+                    <tr class="calendar_table_first-row">
+                        <th class="calendar_table_first-vert"></th>
+                        <th id="th_monday">Понедельник</th>
+                        <th id="th_tuesday">Вторник</th>
+                        <th id="th_wednesday">Среда</th>
+                        <th id="th_thursday">Четверг</th>
+                        <th id="th_friday">Пятница</th>
+                        <th id="th_saturday">Суббота</th>
+                        <th id="th_sunday">Воскресенье</th>
+
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert1">Переговорная комната Бухгалтерия</td>
+                        <td valign="top" id="11"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="12"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="13"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="14"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="15"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="16"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="17"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert2">Дом Ученых - Большой зал</td>
+                        <td valign="top" id="21"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="22"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="23"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="24"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="25"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="26"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="27"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert3">Дом Ученых - Переговорная (Шах комната)</td>
+                        <td valign="top" id="31"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="32"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="33"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="34"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="35">
+                            <button class="button_book">	&#8859; Создать бронирование</button>
+                            <!-- <div class="calendar_table-task2"><p>16:00 -18:00 Концерт</p></div> -->
+                        </td>
+                        <td valign="top" id="36"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="37"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert4">Малый зал для совещаний Дирекция(новая)</td>
+                        <td valign="top" id="41"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="42"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="43"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="44"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="45"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="46"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="47"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert5">Дом Международных Совещаний - Главный зал</td>
+                        <td valign="top" id="51"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="52"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="53"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="54"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="55"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="56"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="57"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert6">Дом Международных Совещаний - Зеленый зал</td>
+                        <td valign="top" id="61"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="62"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="63"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="64"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="65"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="66"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="67"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new_class calendar_table_first-vert7">Административное здание номер 6 - Переговорная комната</td>
+                        <td valign="top" id="71"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="72"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="73"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="74"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="75"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="76"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                        <td valign="top" id="77"><button class="button_book">	&#8859; Создать бронирование</button></td>
+                    </tr>
+                </table>
+            </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css">
+
+  <script defer src="{{ url_for('static', filename='js/fullcalendar/index.global.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/fullcalendar/index.global.min.js') }}"></script>
+  
+  <script defer src="{{ url_for('static', filename='js/index.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/server.js') }}"></script>
+</head>
+
+<body>
+  <h3><button id="but_back" onclick="backWeb()">Назад</button></h3>
+  <div class="task-grid-parent">
+    <div>
+      <div class="task-input task-block">
+        <span>Название задачи: </span>
+        <input type="text" id="nameTask" placeholder="Введите название задачи">
+        <span>Переговорка: </span>
+        <!-- <label for="meetList">Выберите переговорку:</label> -->
+        <select name="meet" id="idMeet">
+            <!-- <option value="1">1</option>
+            <option value="2">2</option> -->
+        </select>
+
+        <!-- <input type="text" id="idMeet" placeholder="Введите переговорку" list="meetList">
+        <datalist id="meetList">
+          <option value="1"></option>
+          <option value="2"></option>
+        </datalist> -->
+        <span>Дата начала: </span>
+        <input type="date" id="dateInput">
+        <span>Время начала: </span>
+        <input type="time" id="timeInput">
+        <span></span>
+        <label><input type="checkbox" id="allDayCheck">Событие весь день</label>
+        <span>Дата завершения: </span>
+        <input type="date" id="dateInputEnd">
+        <span>Время завершения: </span>
+        <input type="time" id="timeInputEnd">
+        <span>Описание: </span>
+        <input type="text" id="descTask" placeholder="Введите описание задачи">
+        <span></span>
+        
+        <button id="addBtn" onclick="addRow()">Добавить</button>
+        <span></span>
+        <button id="sortBtn" onclick="sortEntry()">Сортировать по дате</button>
+        <span></span>
+        <label><input type="checkbox" id="sortlistBtn">Невыполненные задачи</label>
+        <span></span>
+        <button id="saveData" onclick="saveData()">Сохранить данные</button>
+        <span></span>
+        <button id="getData" onclick="getData()">Загрузить данные</button>
+      </div>
+      <table id="dataTbl" class="task-block">
+        <tr>
+          <td>Выполнено</td>
+          <td>Название</td>
+          <td>
+            <select id="meetFilter">
+            </select>
+          </td>
+          <td>Начало</td>
+          <td>Окончание</td>
+          <td>Описание</td>
+          <td>Удалить</td>
+        </tr>
+      </table>
+    </div>
+    <div class="task-calendar task-block">
+      <div id="calendar"></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
